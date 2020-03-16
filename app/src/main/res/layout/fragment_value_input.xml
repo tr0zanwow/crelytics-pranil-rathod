@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.ValueInput">
+
+    <RelativeLayout
+        android:id="@+id/valueInputContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/infoLabel"
+            android:text="Paste your JSON BLOB / Data below"
+            android:layout_centerHorizontal="true"
+            android:textSize="18sp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/open_sans_semibold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:targetApi="jelly_bean" />
+
+        <EditText
+            android:id="@+id/valueInputET"
+            android:padding="20dp"
+            android:layout_below="@id/infoLabel"
+            android:inputType="textMultiLine"
+            android:hint="JSON Input"
+            android:layout_margin="5dp"
+            android:background="@drawable/input_background"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:importantForAutofill="no" />
+
+    </RelativeLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/processDataBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:elevation="10dp"
+        android:layout_marginBottom="20dp"
+        android:layout_gravity="center|bottom"
+        android:src="@drawable/ic_send_24dp" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
